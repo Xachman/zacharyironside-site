@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Template by Quackit.com -->
+<!-- Template by Quackit.com https://www.quackit.com/html/templates/download/bootstrap/business-2/index.html -->
 <!-- Images by various sources under the Creative Commons CC0 license and/or the Creative Commons Zero license. 
 Although you can use them, for a more unique website, replace these images with your own. -->
 <html lang="en">
@@ -45,29 +45,28 @@ Although you can use them, for a more unique website, replace these images with 
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">
-                  <span class="glyphicon glyphicon-fire"></span> 
-                  LOGO
+                  <span class="logo"></span> 
+                  ZARCHARY IRONSIDE
                 </a>
             </div>
             <!-- Navbar links -->
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active">
-                        <a href="#">Home</a>
+                        <a href="/">Home</a>
                     </li>
                     <li>
-                        <a href="#">Products</a>
+                        <a href="/family">Family</a>
                     </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
-            <ul class="dropdown-menu" aria-labelledby="about-us">
-              <li><a href="#">Engage</a></li>
-              <li><a href="#">Pontificate</a></li>
-              <li><a href="#">Synergize</a></li>
-            </ul>
-          </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="about-us"> 
+                            <li><a href="/construction">Construction</a></li>
+                            <!-- <li><a href="#">Dev</a></li> -->
+                        </ul>
+                    </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="/contact">Contact</a>
                     </li>
                 </ul>
                 
@@ -75,7 +74,7 @@ Although you can use them, for a more unique website, replace these images with 
         </div><!-- /.container -->
     </nav>
 
-    {% include './content/'+content+'.html' %}
+    {% include './content/'+content_page+'.html' %}
 
 	<!-- Footer -->
     <footer class="page-footer">
@@ -84,15 +83,15 @@ Although you can use them, for a more unique website, replace these images with 
         <div class="contact">
         	<div class="container">
 				<h2 class="section-heading">Contact Us</h2>
-				<p><span class="glyphicon glyphicon-earphone"></span><br> +1(23) 456 7890</p>
-				<p><span class="glyphicon glyphicon-envelope"></span><br> info@example.com</p>
+				<p><span class="glyphicon glyphicon-earphone"></span><br> 443-735-0092</p>
+				<p><span class="glyphicon glyphicon-envelope"></span><br> zironside@hotmail.com</p>
         	</div>
         </div>
         	
         <!-- Copyright etc -->
         <div class="small-print">
         	<div class="container">
-        		<p>Copyright &copy; Example.com 2015</p>
+        		<p>Copyright &copy; zacharyironside.com {{ year }}</p>
         	</div>
         </div>
         
