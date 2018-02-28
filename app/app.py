@@ -20,11 +20,12 @@ def admin(path=''):
 @app.route('/<path:path>')
 def main(path=''):
     file = Path('./templates/content/'+path+'.html')
+    bodyclass = path.replace("/", "-")
     now = datetime.utcnow()
     if path == '':
-        return render_template('layout.html', content_page='home', year=now.year)
+        return render_template('layout.html', content_page='home', year=now.year, bodyclass='home')
     elif file.is_file():
-        return render_template('layout.html', content_page=path, year=now.year)
+        return render_template('layout.html', content_page=path, year=now.year, bodyclass=bodyclass)
     else:
         abort(404)
 
