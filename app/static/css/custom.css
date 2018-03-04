@@ -347,8 +347,11 @@ img::-moz-selection {
 .bg-primary {
   background-color: yellowgreen; }
 
-.kitchen-remod header {
-  background: "test"; }
+body.construction header {
+  background-image: url("../images/construction/kitchen-remodel/main.jpg"); }
+
+body.construction-kitchen-remodel header {
+  background-image: url("../images/construction/kitchen-remodel/main.jpg"); }
 
 html,
 body {
@@ -699,5 +702,8 @@ img::-moz-selection {
 .bg-primary {
   background-color: yellowgreen; }
 
-.kitchen-remod header {
-  background: "test"; }
+body.construction header {
+  background-image: url("../images/construction/kitchen-remodel/main.jpg"); }
+
+body.construction-kitchen-remodel header {
+  background-image: url("../images/construction/kitchen-remodel/main.jpg"); }
