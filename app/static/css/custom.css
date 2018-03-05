@@ -353,6 +353,9 @@ body.construction header {
 body.construction-kitchen-remodel header {
   background-image: url("../images/construction/kitchen-remodel/main.jpg"); }
 
+.contact a {
+  color: #fff; }
+
 html,
 body {
   width: 100%;
