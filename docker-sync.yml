@@ -1,0 +1,8 @@
+sync:
+  image: sync-container
+  privileged: true
+  volumes:
+    - ./default.prf:/root/.unison/default.prf
+    - ./:/unison
+  environment:
+    TARGET: xach@192.168.1.151:projects/zacharyironside-site

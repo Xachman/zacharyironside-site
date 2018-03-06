@@ -1,0 +1,3 @@
+prefer=newer
+ignore = Path node_modules/*
+ignore = Path vendor/*
