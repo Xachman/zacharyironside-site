@@ -1,6 +1,6 @@
 from flask import Markup
 
-class Link:
+class Nav:
     def __init__(self, path = ""):
         self.path = path
 
