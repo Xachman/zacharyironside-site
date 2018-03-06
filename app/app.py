@@ -4,6 +4,7 @@ from datetime import datetime
 from pathlib import Path
 from pprint import pprint
 from src import Nav
+from os import environ
 app = Flask(__name__)
 
 
@@ -34,6 +35,8 @@ def main(path=''):
         abort(404)
 
 
-
+DEV = False
+if environ.get('DEV') == 'true':
+    DEV = True
 if __name__ == "__main__":
-    app.run(host='0.0.0.0',port=8080, debug=True)
+    app.run(host='0.0.0.0',port=8080, debug=DEV)
