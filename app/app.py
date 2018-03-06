@@ -3,12 +3,15 @@ import sys
 from datetime import datetime
 from pathlib import Path
 from pprint import pprint
+from src import Link
 app = Flask(__name__)
 
 
 def log(input):
     pprint(vars(input), sys.stderr)
 
+def link(linkpath):
+    return  '<a href="'+linkpath+'"' 
 
 @app.route('/admin')
 @app.route('/admin/<path:path>')
@@ -20,12 +23,13 @@ def admin(path=''):
 @app.route('/<path:path>')
 def main(path=''):
     file = Path('./templates/content/'+path+'.html')
+    link = Link.Link(path)
     bodyclass = path.replace("/", "-")
     now = datetime.utcnow()
     if path == '':
-        return render_template('layout.html', content_page='home', year=now.year, bodyclass='home')
+        return render_template('layout.html', content_page='home', year=now.year, bodyclass='home', makelink=link.makelink)
     elif file.is_file():
-        return render_template('layout.html', content_page=path, year=now.year, bodyclass=bodyclass)
+        return render_template('layout.html', content_page=path, year=now.year, bodyclass=bodyclass, makelink=link.makelink)
     else:
         abort(404)
 
