@@ -2,9 +2,11 @@ from flask import Markup
 
 class Nav:
     def __init__(self, path = ""):
-        self.path = path
+        stringList = list(path)
+        
+        self.path = "/"+path
 
-    def makelink(self, path, name):
+    def makeLink(self, path, name):
         active = False
         if path == self.path:
             active = True

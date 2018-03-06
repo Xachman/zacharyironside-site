@@ -27,9 +27,9 @@ def main(path=''):
     bodyclass = path.replace("/", "-")
     now = datetime.utcnow()
     if path == '':
-        return render_template('layout.html', content_page='home', year=now.year, bodyclass='home', makelink=nav.makelink)
+        return render_template('layout.html', content_page='home', year=now.year, bodyclass='home', makeLink=nav.makeLink)
     elif file.is_file():
-        return render_template('layout.html', content_page=path, year=now.year, bodyclass=bodyclass, makelink=nav.makelink)
+        return render_template('layout.html', content_page=path, year=now.year, bodyclass=bodyclass, makeLink=nav.makeLink)
     else:
         abort(404)
 
