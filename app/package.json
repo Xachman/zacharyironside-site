@@ -4,7 +4,7 @@
   "description": "A personal website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "python -m unittest discover -t /usr/src/app/ -s /usr/src/app/src/ --pattern test_*.py"
   },
   "author": "Zachary Ironside",
   "license": "ISC",
