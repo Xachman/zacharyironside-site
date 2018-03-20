@@ -353,6 +353,9 @@ body.construction header {
 body.construction-kitchen-remodel header {
   background-image: url("../images/construction/kitchen-remodel/main.jpg"); }
 
+body.construction-kitchen-remodel header {
+  background-image: url("../images/construction/kitchen-remodel/main.jpg"); }
+
 .contact a {
   color: #fff; }
 
@@ -707,6 +710,10 @@ img::-moz-selection {
 
 body.construction header {
   background-image: url("../images/construction/kitchen-remodel/main.jpg"); }
+
+.contact-space {
+  height: 50px;
+  background: #222; }
 
 body.construction-kitchen-remodel header {
   background-image: url("../images/construction/kitchen-remodel/main.jpg"); }
