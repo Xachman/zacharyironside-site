@@ -10,3 +10,11 @@ services:
     volumes:
       - ./app:/usr/src/app
       - /usr/src/app/node_modules
+  cloud9:
+    image: kdelfour/cloud9-docker
+    volumes:
+      - ./:/workspace
+    ports:
+      - 8081:80
+   
+
