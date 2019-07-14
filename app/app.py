@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, abort
+from flask import Flask, render_template, request, abort, send_from_directory
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -6,7 +6,8 @@ from pprint import pprint
 from src import Nav
 from os import environ
 app = Flask(__name__)
-
+import logging
+logging.basicConfig(filename='error.log',level=logging.DEBUG)
 
 def log(input):
     pprint(vars(input), sys.stderr)
@@ -23,6 +24,9 @@ def admin(path=''):
 @app.route('/')
 @app.route('/<path:path>')
 def main(path=''):
+    file = Path('./static/public/'+path)
+    if file.is_file():
+        return send_from_directory(directory='./static/public', filename=file.name)
     file = Path('./templates/content/'+path+'.html')
     nav = Nav.Nav(path)
     bodyclass = path.replace("/", "-")
